@@ -6,31 +6,51 @@ and open the template in the editor.
 -->
 <html>
     <head>
-    <title>Homework 2</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body> 
-    <form action="action_page.php">
-  First name:<br>
-  <input type="text" name="firstname" value=""><br>
-  Last name:<br>
-  <input type="text" name="lastname" value=""><br>
-  
-      Id Number:<br>
-  <input type="text" name="id number" value=""><br><br>
-  <input type="submit" value="Submit">
-</form>
-    <form>
-        Sex:<br>
-  <input type="radio" name="gender" value="male" checked> Male<br>
-  <input type="radio" name="gender" value="female"> Female<br>
-      Hobbies:<br>
-      <input type="radio" name="gender" value="other"> Music<br>
-      <input type="radio" name="gender" value="other"> Sport<br>
-      <input type="radio" name="gender" value="other"> Photograpy<br>
-      <input type="radio" name="gender" value="other"> Other<br>
-</form>
-<div></div>
-</body>
+        <title>07.03.2016 lesson</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #outer {
+            position: absolute;
+            left: 50%;
+            top:50%;
+            background-color: brown;
+            width: 5 em; 
+            heigth: 2em;   
+            }
+            #inner{ 
+            position: absolute;
+            left: 50%;
+            top:50%;
+            clear:both;
+            vertical-align: middle;
+            text-align: center;
+            background-color: brown;
+            color: burlywood
+            
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="outer"> 
+        <span id="inner">
+            
+            <a href="http//:www.hello.com" target="_blank">Hello</a>
+        </span>
+        </div>
+        <script>
+            $("#inner").hover(
+                    function() {
+            $(this).css("backround-color","green");}
+            , function() {
+            $(this).css("backround-color","blue");}
+        
+            );
+            $("#inner").click(
+                    function() (
+                    window.location ="http://www.hello.com"))
+        
+        </script>
+    </body>
 </html>
