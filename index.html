@@ -1,56 +1,107 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>07.03.2016 lesson</title>
+    
+        <title>Mango the Chihuhua!</title>
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <style>
+            body {background-color: cadetblue}
+            button {
+    display: block;
+    margin: 3px;
+    color: red;
+    width: 200px;
+  }
+  div {
+    color: brown;
+    border: 2px black;
+    width: 200px;
+    margin: 3px;
+    text-align: center;
+            body{ background-color: darkkhaki}
             #outer {
-            position: absolute;
-            left: 50%;
-            top:50%;
-            background-color: brown;
-            width: 5 em; 
-            heigth: 2em;   
+                position: absolute;
+                top:50%;
+                left: 50%;
+                background-color:indigo ;
+                width: 5em;
+                height: 5em;
             }
-            #inner{ 
-            position: absolute;
-            left: 50%;
-            top:50%;
-            clear:both;
-            vertical-align: middle;
-            text-align: center;
-            background-color: brown;
-            color: burlywood
-            
+            #inner {
+                top:50%;
+                left:50%;
+                clear: both;
+                vertical-align: middle;
+                text-align: center;
+                background-color: blue;
+                color: whitesmoke;
+                cursor: pointer;
             }
-            
         </style>
     </head>
     <body>
-        <div id="outer"> 
-        <span id="inner">
-            
-            <a href="http//:www.hello.com" target="_blank">Hello</a>
-        </span>
+        
+        <h1 style="text-decoration: blueviolet">Mango</h1>
+        Welcome to the web page of Mango the Chihuahua. Let's Submit and start to share your moments with your dog and have new frineds!  
+        
+         <form action="action_page.php">
+             Name:<br>
+         <input type="text" name="name" value=""><br>
+             Surname:<br>
+         <input type="text" name="surname" value=""><br>
+             Name of your dog:<br>
+         <input type="text" name="name of your dog" value=""><br>
+        User name:<br>
+        <input type="text" name="username" value=""><br>
+        Password:<br>
+        <input type="text" name="password" value=""><br>
+
+     <br><br>
+     </form>
+    <form>
+         Sex of your dog:<br>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+   <input type="radio" name="gender" value="female"> Female<br>
+       Breed of your dog:<br>
+       <input type="radio" name="gender" value="other"> Chihuahua<br>
+       <input type="radio" name="gender" value="other"> Pug<br>
+       <input type="radio" name="gender" value="other"> Beagle<br>
+       <input type="radio" name="gender" value="other"> Terrier<br>
+       <input type="radio" name="gender" value="other"> Golden Retriever<br>
+       <input type="radio" name="gender" value="other"> Rottweiler<br>
+       <input type="radio" name="gender" value="other"> Great Dane<br>
+       <input type="radio" name="gender" value="other"> Pomeranian<br>
+       <input type="radio" name="gender" value="other"> Dachshund<br>
+       <input type="radio" name="gender" value="other"> Chow Chow<br>                       
+       <input type="radio" name="gender" value="other"> Other<br>                   
+ </form>
+   <input type="submit" value="Submit">
+ 
+
+        <div id="outer">
+            <span id="inner">
+                Mango
+            </span>
         </div>
+       You can check my profile. Just click Mango!
         <script>
-            $("#inner").hover(
-                    function() {
-            $(this).css("backround-color","green");}
-            , function() {
-            $(this).css("backround-color","blue");}
-        
+            $('#inner').hover(
+                function() {
+                    $(this).css('background-color',"green");
+                }, 
+                function() {
+                    $(this).css("background-color","blue");
+                }
             );
-            $("#inner").click(
-                    function() (
-                    window.location ="http://www.hello.com"))
-        
+    
+            $('#inner').click(
+                function() {
+                    window.location = "http://www.petarkadas.com/mango35";
+                }
+            );
         </script>
     </body>
 </html>
