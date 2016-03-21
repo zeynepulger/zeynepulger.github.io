@@ -6,34 +6,32 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>11.03.2016</title>
+        <title>21.03.2016</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="htpps://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script> 
-            function factorial(num) {
-            var res = 1; //the result will return
-            for(var i=2; i<=num; i++) { //loop up to num
-                res =res * i; //res *= i;
-            }
-        return res; }
-    // var res5 = factorial(5);
-            function calculate() {
-            var innum = $('#num').val();
-            var res = factorial(innum);
-            $('#res').val(res);
-        }
-    </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
     </head>
     <body>
-        <div>
-            <form>
-                
-                <input type="text" id="num" value="10"/>
-                <input type="text" id="res" placeholder="Here goes the result">
-                <input type="submit" onclick="calculate();"/>
-                <input type="button" onmouseover="calculate();" onclick="calcultae();"/>
-            </form>
-        </div>
+        <h2>JSON Object Creation in Javascript</h2>
+        <p id="demo"> </p>
+        <script>
+            var obj = '{"name":"Zeynep Ülger","street":"52/126","phone":"539 6689973","email":"zeynepulger@std.iyte.edu.tr","age":"21","sex":"female","height":165, "weight":60}';
+
+            var rat = calcRatio(obj.height, obj.weight)
+            $("#demo").append("height weight ratio: " + rat);
+            function calcRatio(height, weight) {
+                return height / weight;
+            }
+            obj.name + "<br>" +
+                    obj.street + "<br>" +
+                    obj.phone + "<br>" +
+                    obj.email + "<br>" +
+                    obj.age + "<br>" +
+                    obj.sex + "<br>" +
+                    obj.height + "<br>" +
+                    obj.weight;
+        </script> 
+        <div></div>
     </body>
 </html>
