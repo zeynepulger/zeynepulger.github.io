@@ -6,32 +6,46 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>21.03.2016</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>        
+
+        <title>JSON Array</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
     </head>
     <body>
-        <h2>JSON Object Creation in Javascript</h2>
-        <p id="demo"> </p>
+        
+        <div id = "avg">
+            
+        </div>
+        
         <script>
-            var obj = '{"name":"Zeynep Ülger","street":"52/126","phone":"539 6689973","email":"zeynepulger@std.iyte.edu.tr","age":"21","sex":"female","height":165, "weight":60}';
-
-            var rat = calcRatio(obj.height, obj.weight)
-            $("#demo").append("height weight ratio: " + rat);
-            function calcRatio(height, weight) {
-                return height / weight;
+            
+            var students = {students:[
+                    {"name":"caner", "age":25, "height":170},
+                    {"name":"canan", "age":27, "height":175},
+                    {"name":"jens", "age":40, "height":170}]};
+            var avgAge = calcAvgAge(students);
+            $('#avg').append("Average age of students: " + avgAge + "<br>");
+            var avgHeight = calcAvgHeight(students);
+            $('#avg').append("Average height of students: " + avgHeight + "<br>");
+            
+            function calcAvgAge(obj){
+                var totalAge = 0;
+                for(var i = 0; i < obj.students.length; i++){
+                    totalAge += obj.students[i].age;
+                }
+                return totalAge / obj.students.length;
             }
-            obj.name + "<br>" +
-                    obj.street + "<br>" +
-                    obj.phone + "<br>" +
-                    obj.email + "<br>" +
-                    obj.age + "<br>" +
-                    obj.sex + "<br>" +
-                    obj.height + "<br>" +
-                    obj.weight;
-        </script> 
-        <div></div>
+            
+            function calcAvgHeight(obj){
+                var totalHeight = 0;
+                for(var i = 0; i < obj.students.length; i++){
+                    totalHeight += obj.students[i].height;
+                }
+                return totalHeight / obj.students.length;
+            }
+            
+        </script>
+        
     </body>
 </html>
